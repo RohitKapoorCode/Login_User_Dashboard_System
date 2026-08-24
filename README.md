@@ -59,6 +59,8 @@ PHP-Login-Authentication-System/
 <img src="4.png">
 <h1>Update Profile Page </h1>
 <img src="5.png">
+<h1>Logout  </h1>
+<img src="6.png">
 
 
 
