@@ -4,7 +4,7 @@ A simple and responsive **PHP Login and User Dashboard System** built using PHP,
 
 This project is created to practice user authentication, database connectivity, password hashing, sessions, cookies, profile management, and basic CRUD operations.
 
----
+
 
 ## 🚀 Features
 
@@ -38,11 +38,8 @@ This project is created to practice user authentication, database connectivity, 
 - MySQL
 - XAMPP
 
----
-
 ## 📂 Project Structure
 
-```text
 PHP-Login-Authentication-System/
 │
 ├── login.php
@@ -51,5 +48,22 @@ PHP-Login-Authentication-System/
 ├── update.php
 ├── dash.php
 ├── logout.php
-│
-└── README.md
+
+<h1>Login Form </h1>
+<img src="1.png">
+<h1>Register Form </h1>
+<img src="2.png">
+<h1>Reset Password </h1>
+<img src="3.png">
+<h1>Dashboard Page</h1>
+<img src="4.png">
+<h1>Update Profile Page </h1>
+<img src="5.png">
+
+
+
+
+
+
+
+
