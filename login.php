@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (isset($_POST['submit'])) {
 
     $login = $_POST['login'];
@@ -40,11 +41,7 @@ if (isset($_POST['submit'])) {
 
     } else {
 
-        echo "<script>
-                alert('You are not registered. Please register first');
-                window.location.href='register.php';
-              </script>";
-
+        echo "header("Location: register.php");
         exit;
     }
 
