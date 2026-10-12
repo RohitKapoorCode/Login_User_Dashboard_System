@@ -1,6 +1,4 @@
-
 <?php
-
 if (isset($_POST['submit'])) {
 
     $login = $_POST['login'];
@@ -54,7 +52,7 @@ if (isset($_POST['submit'])) {
     }
 
 ?>
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
