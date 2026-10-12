@@ -2,9 +2,9 @@
 
 A simple and responsive **PHP Login and User Dashboard System** built using PHP, MySQL, HTML, CSS, Bootstrap, and JavaScript.
 
-This project is created to practice user authentication, database connectivity, password hashing, sessions, cookies, profile management, and basic CRUD operations.
+This project is created  user  Basic authentication, database connectivity, password hashing, sessions, cookies, profile management as to Edit Details  and basic CRUD operations.
 
-
+let See this https://login-user-dashboard-system.onrender.com
 
 ## 🚀 Features
 
@@ -16,27 +16,19 @@ This project is created to practice user authentication, database connectivity, 
 - ✅ PHP Session Authentication
 - ✅ PHP Cookies
 - ✅ Protected Dashboard
-- ✅ User Profile Update
 - ✅ Update Personal Information
-- ✅ Change Password
 - ✅ Logout
-- ✅ Responsive UI
-- ✅ Bootstrap 5
-- ✅ MySQL Database Integration
-- ✅ Show Logged-in User Information
-- ✅ Show/Hide Password
 
 ---
 
 ## 🛠️ Technologies Used
 
-- HTML5
-- CSS3
+- HTML5 & CSS
 - Bootstrap 5
-- JavaScript
+- JavaScript Basic  
 - PHP
-- MySQL
-- XAMPP
+- MySQL (Database)
+- XAMPP (Xampp is provide a Server)
 
 ## 📂 Project Structure
 
