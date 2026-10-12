@@ -24,10 +24,13 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($conn, $query);
 
     if ($result) {
-        echo "<script>alert('Registered successfully. Please login.')</script>";   
-        header("Location: login.php");
-        exit;
-
+    mysqli_close($conn); 
+    echo "<script>
+            alert('Registered successfully. Please login.');
+            window.location.href = 'login.php';
+        </script>";
+    exit;
+}
     } else {
 
         echo "Query Error: " . mysqli_error($conn);
