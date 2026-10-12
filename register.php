@@ -1,3 +1,43 @@
+<?php
+if (isset($_POST['submit'])) {
+    $name = $_POST['firstname'];
+    $last = $_POST['lastname'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $date = $_POST['date'];
+    $gender = $_POST['gender'];
+    $username = $_POST['username'];
+
+    // Password Hash
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+    // Database Connection
+    $conn = mysqli_connect("mysql-4acf231-rk7612570-43fe.g.aivencloud.com", "avnadmin", getenv('DB_PASSWORD'), "login_Form", 27958) or die("Connection Failed");
+
+
+    // Insert Query
+    $query = "INSERT INTO `register`
+    (`first_name`, `last_name`, `email`, `phone`, `date`, `gender`, `username`, `password`)
+    VALUES
+    ('$name', '$last', '$email', '$phone', '$date', '$gender', '$username', '$password')";
+
+    $result = mysqli_query($conn, $query);
+
+    if ($result) {
+
+        header("Location: login.php");
+        exit;
+
+    } else {
+
+        echo "Query Error: " . mysqli_error($conn);
+
+    }
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -87,45 +127,7 @@
 
 <body>
 
-<?php
-if (isset($_POST['submit'])) {
-    $name = $_POST['firstname'];
-    $last = $_POST['lastname'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $date = $_POST['date'];
-    $gender = $_POST['gender'];
-    $username = $_POST['username'];
 
-    // Password Hash
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-    // Database Connection
-    $conn = mysqli_connect("mysql-4acf231-rk7612570-43fe.g.aivencloud.com", "avnadmin", getenv('DB_PASSWORD'), "login_Form", 27958) or die("Connection Failed");
-
-
-    // Insert Query
-    $query = "INSERT INTO `register`
-    (`first_name`, `last_name`, `email`, `phone`, `date`, `gender`, `username`, `password`)
-    VALUES
-    ('$name', '$last', '$email', '$phone', '$date', '$gender', '$username', '$password')";
-
-    $result = mysqli_query($conn, $query);
-
-    if ($result) {
-
-        header("Location: login.php");
-        exit;
-
-    } else {
-
-        echo "Query Error: " . mysqli_error($conn);
-
-    }
-
-}
-
-?>
 
 <div class="card register-card bg-white">
 
