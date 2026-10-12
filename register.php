@@ -116,7 +116,7 @@ if (isset($_POST['submit'])) {
 
     if ($result) {
 
-        header("https://login-user-dashboard-system.onrender.com/");
+        header("Location: login.php");
         exit;
 
     } else {
