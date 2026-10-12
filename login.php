@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
         );
 
 
-            header("Location: http://localhost/Rohit%20Project/Login%20Form/dash.php");
+            header("Location: dash.php");
             exit;
 
         } else {
