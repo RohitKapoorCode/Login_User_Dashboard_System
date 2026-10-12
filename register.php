@@ -103,8 +103,8 @@ if (isset($_POST['submit'])) {
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     // Database Connection
-    $conn = mysqli_connect("localhost", "root", "", "login_form")
-        or die("Connection Failed");
+    $conn = mysqli_connect("mysql-4acf231-rk7612570-43fe.g.aivencloud.com", "avnadmin", getenv('DB_PASSWORD'), "login_Form", 27958) or die("Connection Failed");
+
 
     // Insert Query
     $query = "INSERT INTO `register`
@@ -116,7 +116,7 @@ if (isset($_POST['submit'])) {
 
     if ($result) {
 
-        header("Location: http://localhost/Rohit%20Project/Login%20Form/login.php");
+        header("https://login-user-dashboard-system.onrender.com/");
         exit;
 
     } else {
