@@ -1,6 +1,59 @@
 <!DOCTYPE html>
 <?php
 session_start();
+
+if (isset($_POST['submit'])) {
+
+    $login = $_POST['login'];
+    $Pass = $_POST['password'];
+
+    $conn = mysqli_connect("mysql-4acf231-rk7612570-43fe.g.aivencloud.com", "avnadmin", getenv('DB_PASSWORD'), "login_Form", 27958) or die("Connection Failed");
+
+
+    $query = "SELECT * FROM register WHERE username='$login'";
+
+    $result = mysqli_query($conn, $query);
+
+    if (mysqli_num_rows($result) > 0) {
+
+        $user = mysqli_fetch_assoc($result);
+
+        if (password_verify($Pass, $user['password'])) {
+
+        $_SESSION['login'] = $user['email'];
+
+        $cookie_name = "login";
+        $cookie_value = $user['username'];
+
+        setcookie(
+            $cookie_name,
+            $cookie_value,
+            time() + 120 ,
+            "/"
+        );
+
+
+            header("Location: http://localhost/Rohit%20Project/Login%20Form/dash.php");
+            exit;
+
+        } else {
+
+            echo "<script>alert('Wrong Password')</script>";
+        }
+
+    } else {
+
+        echo "<script>
+                alert('You are not registered. Please register first');
+                window.location.href='register.php';
+              </script>";
+
+        exit;
+    }
+
+    
+    }
+
 ?>
 
 <html lang="en">
@@ -80,57 +133,6 @@ session_start();
 
 <?php
 
-if (isset($_POST['submit'])) {
-
-    $login = $_POST['login'];
-    $Pass = $_POST['password'];
-
-    $conn = mysqli_connect("mysql-4acf231-rk7612570-43fe.g.aivencloud.com", "avnadmin", getenv('DB_PASSWORD'), "login_Form", 27958) or die("Connection Failed");
-
-
-    $query = "SELECT * FROM register WHERE username='$login'";
-
-    $result = mysqli_query($conn, $query);
-
-    if (mysqli_num_rows($result) > 0) {
-
-        $user = mysqli_fetch_assoc($result);
-
-        if (password_verify($Pass, $user['password'])) {
-
-        $_SESSION['login'] = $user['email'];
-
-        $cookie_name = "login";
-        $cookie_value = $user['username'];
-
-        setcookie(
-            $cookie_name,
-            $cookie_value,
-            time() + 120 ,
-            "/"
-        );
-
-
-            header("Location: http://localhost/Rohit%20Project/Login%20Form/dash.php");
-            exit;
-
-        } else {
-
-            echo "<script>alert('Wrong Password')</script>";
-        }
-
-    } else {
-
-        echo "<script>
-                alert('You are not registered. Please register first');
-                window.location.href='register.php';
-              </script>";
-
-        exit;
-    }
-
-    
-    }
 
 ?>
 
