@@ -41,11 +41,15 @@ if (isset($_POST['submit'])) {
 
     } else {
         mysqli_close($conn);
-        echo "<script>alert('You are Not User Please Register Now')</script>";
-        header("Location: register.php");
+        echo "<script>
+            alert('You are Not User Please Register Now')
+            window.location.href='register.php';
+            </script>";
+       
         exit;
     }
     }
+   
 
 ?>
 
