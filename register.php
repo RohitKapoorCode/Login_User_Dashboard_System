@@ -88,9 +88,7 @@
 <body>
 
 <?php
-
 if (isset($_POST['submit'])) {
-
     $name = $_POST['firstname'];
     $last = $_POST['lastname'];
     $email = $_POST['email'];
@@ -116,7 +114,7 @@ if (isset($_POST['submit'])) {
 
     if ($result) {
 
-        header("Location:login.php");
+        header("Location: login.php");
         exit;
 
     } else {
