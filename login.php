@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+session_start();
+?>
+
 <html lang="en">
 
 <head>
@@ -75,7 +79,7 @@
 <body>
 
 <?php
-session_start();
+
 if (isset($_POST['submit'])) {
 
     $login = $_POST['login'];
