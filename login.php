@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
 
     } else {
 
-        echo "header("Location: register.php");
+        header("Location: register.php");
         exit;
     }
 
