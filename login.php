@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <?php
 
 if (isset($_POST['submit'])) {
@@ -54,7 +54,7 @@ if (isset($_POST['submit'])) {
     }
 
 ?>
-
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -129,11 +129,6 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-
-<?php
-
-
-?>
 
 <div class="card login-card bg-white">
 
