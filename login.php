@@ -41,6 +41,7 @@ if (isset($_POST['submit'])) {
 
     } else {
 
+        mysqli_close($conn);
         header("Location: register.php");
         exit;
     }
