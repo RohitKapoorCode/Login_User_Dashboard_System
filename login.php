@@ -81,8 +81,8 @@ if (isset($_POST['submit'])) {
     $login = $_POST['login'];
     $Pass = $_POST['password'];
 
-    $conn = mysqli_connect("localhost", "root", "", "login_form")
-        or die("Connection is Disconnected");
+    $conn = mysqli_connect("mysql-4acf231-rk7612570-43fe.g.aivencloud.com", "avnadmin", getenv('DB_PASSWORD'), "login_Form", 27958) or die("Connection Failed");
+
 
     $query = "SELECT * FROM register WHERE username='$login'";
 
