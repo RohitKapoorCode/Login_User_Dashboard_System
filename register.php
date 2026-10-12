@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($conn, $query);
 
     if ($result) {
-
+        echo "Registered successfully. Please login.";
         header("Location: login.php");
         exit;
 
