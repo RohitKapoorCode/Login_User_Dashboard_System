@@ -10,7 +10,8 @@ if (!isset($_SESSION['login'])) {
 
 
 /* Database connection */
-$conn = mysqli_connect("localhost", "root", "", "login_form");
+$conn = mysqli_connect("mysql-4acf231-rk7612570-43fe.g.aivencloud.com", "avnadmin", getenv('DB_PASSWORD'), "login_Form", 27958) or die("Connection Failed");
+
 
 if (!$conn) {
     die("Connection Failed: " . mysqli_connect_error());
