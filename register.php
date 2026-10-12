@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
             window.location.href = 'login.php';
         </script>";
     exit;
-}
+
     } else {
 
         echo "Query Error: " . mysqli_error($conn);
