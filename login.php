@@ -151,7 +151,7 @@ if (isset($_POST['submit'])) {
                     Username
                 </label>
 
-                <input type="email"
+                <input type="text"
                        name="login"
                        class="form-control"
                        placeholder="Enter Username"
